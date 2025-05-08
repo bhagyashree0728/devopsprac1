@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy everything from your code into the Docker image
 COPY . .
 
-# Run this command to install app dependencies
-RUN npm install
+# Run a simple static message to test
+RUN echo "Docker setup is working fine!"
 
-# Tell Docker how to start your app
-CMD ["npm", "start"]
+# Set the default command to run when the container starts
+CMD ["echo", "This is a static message to test Docker"]
